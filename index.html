@@ -1,7 +1,37 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>Is the beer done yet?</title>
+    <link rel="stylesheet" href="style.css">
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <script language="javascript" type="text/javascript" src="beers.js"></script>
 </head>
+
 <body>
-Hello, world!
+    <div id="header">
+        <h1>Is the beer done yet?</h1>
+    </div>
+    <div id="schedule">
+        <h2>Schedule</h2>
+    </div>
+    <div id="current-beers" class="beers-section">
+        <h3>Beers Brewing</h3>
+        <table id="current-beers-list" class="beers-list">
+            <tr>
+                <th class="cell-left beer-list-header">Name</th>
+                <th class="cell-right beer-list-header">Status</th>
+            </tr>
+        </table>
+    </div>
+    <div id="past-beers" class="beers-section">
+        <h3>Past Beers</h3>
+        <table id="past-beers-list" class="beers-list">
+            <tr>
+                <th class="cell-left beer-list-header">Name</th>
+                <th class="cell-right beer-list-header">Status</th>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
