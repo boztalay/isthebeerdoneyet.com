@@ -21,11 +21,14 @@ function displayBeers() {
 
 function fillSchedule() {
     setUpSchedule()
-    sortedBeers = sortBeersByContentInThisTimePeriod()
+    sortedBeers = sortBeersByOverlapWithThisTimePeriod()
+
     scheduleTable = document.getElementById("schedule-table")
 
     for(beerIndex in sortedBeers) {
         beer = sortedBeers[beerIndex]
+
+        // Keeps track of which days on the schedule this beer isn't using so placeholders can be put there
         daysNotOccupied = Array.apply(null, Array(14)).map(function (_, i) {return i;});
 
         for(stepIndex in beer.steps) {
@@ -36,7 +39,9 @@ function fillSchedule() {
 
             if(step.overlap > 0) {
                 startDay = Math.max(0, (stepStart - startOfThisWeek)) / (1000 * 60 * 60 * 24)
-                for(var i = startDay; i < startDay + step.overlap; i++) {
+                endDay = startDay + step.overlap
+
+                for(var i = startDay; i < endDay; i++) {
                     weekIndex = Math.floor(i / 7.0)
                     dayIndex = i % 7
                     cell = scheduleTable.rows[weekIndex].cells[dayIndex]
@@ -52,7 +57,7 @@ function fillSchedule() {
                         stepDiv.innerHTML = "&nbsp;"
                     }
 
-                    if(i == startDay + step.overlap - 1) {
+                    if(i == endDay - 1) {
                         stepDiv.style.marginRight = "0px"
                     }
 
@@ -63,6 +68,7 @@ function fillSchedule() {
             }
         }
 
+        // Put in placeholders where this beer doesn't have steps so everything stays aligned
         if(daysNotOccupied.length < 14) {
             for(dayIndex in daysNotOccupied) {
                 dayNotOccupied = daysNotOccupied[dayIndex]
@@ -103,10 +109,10 @@ function setUpSchedule() {
     }
 }
 
-function sortBeersByContentInThisTimePeriod() {
+function sortBeersByOverlapWithThisTimePeriod() {
     for(beerIndex in beers) {
         beer = beers[beerIndex]
-        numDays = 0
+        totalOverlap = 0
 
         for(stepIndex in beer.steps) {
             step = beer.steps[stepIndex]
@@ -118,10 +124,10 @@ function sortBeersByContentInThisTimePeriod() {
             stepOverlapWithPeriod = (stepOverlapWithPeriodMillis / (1000 * 60 * 60 * 24))
             step.overlap = stepOverlapWithPeriod
 
-            numDays += stepOverlapWithPeriod
+            totalOverlap += stepOverlapWithPeriod
         }
 
-        beer.overlap = numDays
+        beer.overlap = totalOverlap
     }
 
     sortedBeers = beers
