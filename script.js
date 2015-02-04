@@ -153,35 +153,3 @@ function fillBeerLists() {
         statusCell.innerHTML = beer.state
     }
 }
-
-function checkKey(e) {
-    e = e || window.event
-    if (e.keyCode == "37") {
-        resetSchedule()
-        now.setDate(now.getDate() - 7)
-        displayBeers()
-    } else if(e.keyCode == "39") {
-        resetSchedule()
-        now.setDate(now.getDate() + 7)
-        displayBeers()
-    }
-}
-
-function resetSchedule() {
-    scheduleTable = document.getElementById("schedule-table")
-    for(rowIndex in scheduleTable.rows) {
-        row = scheduleTable.rows[rowIndex]
-        for(cellIndex in row.cells) {
-            cell = row.cells[cellIndex]
-            cell.innerHTML = ""
-        }
-    }
-
-    currentBeersList = document.getElementById("current-beers-list")
-    pastBeersList = document.getElementById("past-beers-list")
-
-    currentBeersList.innerHTML = ""
-    pastBeersList.innerHTML = ""
-}
-
-document.onkeydown = checkKey
