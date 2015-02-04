@@ -12,9 +12,41 @@
     <div id="header">
         <h1>Is the beer done yet?</h1>
     </div>
+
     <div id="schedule">
-        <h2>Schedule</h2>
+        <table id="schedule-header-table">
+            <tr>
+                <th class="schedule-header">Sun</th>
+                <th class="schedule-header">Mon</th>
+                <th class="schedule-header">Tue</th>
+                <th class="schedule-header">Wed</th>
+                <th class="schedule-header">Thu</th>
+                <th class="schedule-header">Fri</th>
+                <th class="schedule-header">Sat</th>
+            </tr>
+        </table>
+        <table id="schedule-table">
+            <tr>
+                <td class="schedule-cell blue-gray"></td>
+                <td class="schedule-cell"></td>
+                <td class="schedule-cell blue-gray"></td>
+                <td class="schedule-cell"></td>
+                <td class="schedule-cell blue-gray"></td>
+                <td class="schedule-cell"></td>
+                <td class="schedule-cell blue-gray"></td>
+            </tr>
+            <tr>
+                <td class="schedule-cell"></td>
+                <td class="schedule-cell blue-gray"></td>
+                <td class="schedule-cell"></td>
+                <td class="schedule-cell blue-gray"></td>
+                <td class="schedule-cell"></td>
+                <td class="schedule-cell blue-gray"></td>
+                <td class="schedule-cell"></td>
+            </tr>
+        </table>
     </div>
+
     <div id="current-beers" class="beers-section">
         <h3>Beers Brewing</h3>
         <table id="current-beers-list" class="beers-list">
@@ -24,8 +56,9 @@
             </tr>
         </table>
     </div>
+
     <div id="past-beers" class="beers-section">
-        <h3>Past Beers</h3>
+        <h3>Beers Past</h3>
         <table id="past-beers-list" class="beers-list">
             <tr>
                 <th class="cell-left beer-list-header">Name</th>

@@ -1,6 +1,7 @@
 beers = [
   {
-    "name": "Untitled Belgian Tripel",
+    "name": "Belgian Tripel",
+    "shortName": "BT",
     "done": false,
     "state": "Fermenting",
     "steps": [
@@ -22,7 +23,8 @@ beers = [
     ]
   },
   {
-    "name": "Untitled IPA",
+    "name": "IPA",
+    "shortName": "IPA",
     "done": false,
     "state": "Ready to Bottle",
     "steps": [
@@ -55,6 +57,7 @@ beers = [
   },
   {
     "name": "Watch Your Toungue Ginger Beer",
+    "shortName": "GB",
     "done": true,
     "state": "All gone!",
     "steps": [
@@ -82,6 +85,7 @@ beers = [
   },
   {
     "name": "Winter Break Red",
+    "shortName": "WBR",
     "done": true,
     "state": "All gone!",
     "steps": [
@@ -104,6 +108,7 @@ beers = [
   },
   {
     "name": "Responsible Red",
+    "shortName": "RR",
     "done": true,
     "state": "All gone!",
     "steps": [
