@@ -38,7 +38,7 @@ body {
 
 .schedule-header {
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: #f2f2fa;
     border-bottom: 1px solid black;
 }
 
@@ -60,12 +60,19 @@ body {
 }
 
 .beer-step {
-    font-size: 70%;
+    font-size: 68%;
     padding-top: 3px;
     padding-bottom: 3px;
     margin-bottom: 2px;
     margin-left: -1px;
     margin-right: -1px;
+}
+
+.beer-step-empty {
+    font-size: 68%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .blue-gray {

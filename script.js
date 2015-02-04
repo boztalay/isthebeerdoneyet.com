@@ -4,13 +4,14 @@ beerColors = ["#746af4", "#55f855", "#5bc1f2"]
 
 var startOfThisWeek
 var endOfThisPeriod
+var now = new Date()
 
 function displayBeers() {
-    startOfThisWeek = new Date()
+    startOfThisWeek = new Date(now)
     startOfThisWeek.setDate(startOfThisWeek.getDate() - startOfThisWeek.getDay())
     startOfThisWeek.setHours(0, 0, 0, 0)
 
-    endOfThisPeriod = new Date()
+    endOfThisPeriod = new Date(now)
     endOfThisPeriod.setDate(startOfThisWeek.getDate() + 14)
     endOfThisPeriod.setHours(0, 0, 0, 0)
 
@@ -25,6 +26,7 @@ function fillSchedule() {
 
     for(beerIndex in sortedBeers) {
         beer = sortedBeers[beerIndex]
+        daysNotOccupied = Array.apply(null, Array(14)).map(function (_, i) {return i;});
 
         for(stepIndex in beer.steps) {
             step = beer.steps[stepIndex]
@@ -54,8 +56,25 @@ function fillSchedule() {
                         stepDiv.style.marginRight = "0px"
                     }
 
+                    daysNotOccupied.splice(daysNotOccupied.indexOf(i), 1)
+
                     cell.appendChild(stepDiv)
                 }
+            }
+        }
+
+        if(daysNotOccupied.length < 14) {
+            for(dayIndex in daysNotOccupied) {
+                dayNotOccupied = daysNotOccupied[dayIndex]
+                weekIndex = Math.floor(dayNotOccupied / 7.0)
+                dayIndex = dayNotOccupied % 7
+                cell = scheduleTable.rows[weekIndex].cells[dayIndex]
+
+                emptyDiv = document.createElement("div")
+                emptyDiv.className = "beer-step-empty"
+                emptyDiv.innerHTML = "&nbsp;"
+
+                cell.appendChild(emptyDiv)
             }
         }
     }
@@ -98,6 +117,7 @@ function sortBeersByContentInThisTimePeriod() {
             stepOverlapWithPeriodMillis = Math.max(0, Math.min(stepEnd.getTime(), endOfThisPeriod.getTime()) - Math.max(stepStart.getTime(), startOfThisWeek.getTime()))
             stepOverlapWithPeriod = (stepOverlapWithPeriodMillis / (1000 * 60 * 60 * 24))
             step.overlap = stepOverlapWithPeriod
+
             numDays += stepOverlapWithPeriod
         }
 
@@ -133,3 +153,35 @@ function fillBeerLists() {
         statusCell.innerHTML = beer.state
     }
 }
+
+function checkKey(e) {
+    e = e || window.event
+    if (e.keyCode == "37") {
+        resetSchedule()
+        now.setDate(now.getDate() - 7)
+        displayBeers()
+    } else if(e.keyCode == "39") {
+        resetSchedule()
+        now.setDate(now.getDate() + 7)
+        displayBeers()
+    }
+}
+
+function resetSchedule() {
+    scheduleTable = document.getElementById("schedule-table")
+    for(rowIndex in scheduleTable.rows) {
+        row = scheduleTable.rows[rowIndex]
+        for(cellIndex in row.cells) {
+            cell = row.cells[cellIndex]
+            cell.innerHTML = ""
+        }
+    }
+
+    currentBeersList = document.getElementById("current-beers-list")
+    pastBeersList = document.getElementById("past-beers-list")
+
+    currentBeersList.innerHTML = ""
+    pastBeersList.innerHTML = ""
+}
+
+document.onkeydown = checkKey
