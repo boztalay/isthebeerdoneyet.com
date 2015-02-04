@@ -56,7 +56,7 @@ beers = [
     ]
   },
   {
-    "name": "Watch Your Toungue Ginger Beer",
+    "name": "Watch Your Tongue Ginger Beer",
     "shortName": "GB",
     "done": true,
     "state": "All gone!",
