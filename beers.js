@@ -26,7 +26,7 @@ beers = [
     "name": "IPA",
     "shortName": "IPA",
     "done": false,
-    "state": "Ready to Bottle",
+    "state": "Bottled and Conditioning",
     "steps": [
       {
         "name": "Brew Day",
