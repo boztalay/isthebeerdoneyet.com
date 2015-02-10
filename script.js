@@ -144,7 +144,7 @@ function fillBeerLists() {
         beer = beers[beerIndex]
 
         newRow = null
-        if(!beer.done) {
+        if(!beer.gone) {
             newRow = currentBeersList.insertRow()
         } else {
             newRow = pastBeersList.insertRow()
