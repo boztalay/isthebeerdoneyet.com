@@ -1,0 +1,9 @@
+{
+    "name": "isthebeerdoneyet",
+    "displayName": "Is the Beer Done Yet?",
+    "description": "Checks if the beer is done",
+    "examples": ["is the beer done yet?", "how's the beer?"],
+    "categories": ["Information"],
+    "creator_name": "Ben Oztalay",
+    "creator_url": "www.benoztalay.com"
+}

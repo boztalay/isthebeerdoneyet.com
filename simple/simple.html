@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script language="javascript" type="text/javascript" src="../beers.js"></script>
+    <script language="javascript" type="text/javascript">
+        window.onload = displayBeers
+
+        function displayBeers() {
+            console.log(beers)
+
+            doneBeers = []
+            i = 0
+            for(beerIndex in beers) {
+                beer = beers[beerIndex]
+                if(beer.done && !beer.gone) {
+                    doneBeers[i] = beer
+                    i++
+                }
+            }
+
+            if(doneBeers.length > 0) {
+                document.getElementById("main-result").innerHTML = "Yes!"
+                document.getElementById("beers-header").innerHTML = "Looks like these beers are done:"
+
+                beersElement = document.getElementById("beers")
+
+                for(beerIndex in doneBeers) {
+                    beer = doneBeers[beerIndex]
+                    newBeerElement = document.createElement("div")
+                    newBeerElement.innerHTML = beer.name
+                    beersElement.appendChild(newBeerElement)
+                }
+            } else {
+                document.getElementById("main-result").innerHTML = "No"
+                document.getElementById("beers-header").innerHTML = ":("
+            }
+        }
+    </script>
+</head>
+
+<body style="font-family: sans-serif; margin: 20 20 20 20; background-color: #eee">
+    <h1 id="main-result" align="center">Checking...</h1>
+    <div id="beers" align="center">
+        <h3 id="beers-header" align="center">Uno momento</h3>
+    </div>
+<body>
+</html>
