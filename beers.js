@@ -28,7 +28,7 @@ beers = [
     "shortName": "IPA",
     "done": false,
     "gone": false,
-    "state": "Ready to Bottle",
+    "state": "Bottled and Conditioning",
     "steps": [
       {
         "name": "Brew Day",
@@ -48,17 +48,17 @@ beers = [
       {
         "name": "Fermentation",
         "start": "01\/27\/2015",
-        "end": "02\/04\/2015"
+        "end": "02\/06\/2015"
       },
       {
         "name": "Conditioning",
-        "start": "02\/05\/2015",
-        "end": "02\/18\/2015"
+        "start": "02\/07\/2015",
+        "end": "02\/20\/2015"
       }
     ]
   },
   {
-    "name": "Watch Your Toungue Ginger Beer",
+    "name": "Watch Your Tongue Ginger Beer",
     "shortName": "GB",
     "done": true,
     "gone": true,
