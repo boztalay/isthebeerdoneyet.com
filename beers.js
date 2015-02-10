@@ -2,7 +2,7 @@ beers = [
   {
     "name": "Belgian Tripel",
     "shortName": "BT",
-    "done": true,
+    "done": false,
     "gone": false,
     "state": "Fermenting",
     "steps": [
