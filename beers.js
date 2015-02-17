@@ -26,14 +26,14 @@ beers = [
   {
     "name": "IPA",
     "shortName": "IPA",
-    "done": false,
+    "done": true,
     "gone": false,
     "state": "Bottled and Conditioning",
     "steps": [
       {
         "name": "Brew Day",
         "start": "01\/19\/2015",
-        "end": "01\/19\/2015"
+        "end": "01\/19\/d2015"
       },
       {
         "name": "Fermentation",
@@ -53,7 +53,7 @@ beers = [
       {
         "name": "Conditioning",
         "start": "02\/07\/2015",
-        "end": "02\/20\/2015"
+        "end": "02\/17\/2015"
       }
     ]
   },
