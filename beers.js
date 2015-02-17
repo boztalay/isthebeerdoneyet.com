@@ -1,5 +1,29 @@
 beers = [
   {
+    "name": "Milk Stout",
+    "shortName": "MS",
+    "done": false,
+    "gone": false,
+    "state": "Brewing",
+    "steps": [
+      {
+        "name": "Brew Day",
+        "start": "02\/17\/2015",
+        "end": "02\/17\/2015"
+      },
+      {
+        "name": "Fermentation",
+        "start": "02\/18\/2015",
+        "end": "03\/11\/2015"
+      },
+      {
+        "name": "Conditioning",
+        "start": "03\/12\/2015",
+        "end": "03\/26\/2015"
+      }
+    ]
+  },
+  {
     "name": "Belgian Tripel",
     "shortName": "BT",
     "done": false,
