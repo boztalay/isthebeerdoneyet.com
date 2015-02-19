@@ -1,6 +1,6 @@
 beers = [
   {
-    "name": "Milk Stout",
+    "name": "Spring Break Milk Stout",
     "shortName": "MS",
     "done": false,
     "gone": false,
