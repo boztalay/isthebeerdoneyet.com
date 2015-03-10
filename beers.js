@@ -1,10 +1,34 @@
 beers = [
   {
+    "name": "Spring Break Milk Stout",
+    "shortName": "MS",
+    "done": false,
+    "gone": false,
+    "state": "Fermenting",
+    "steps": [
+      {
+        "name": "Brew Day",
+        "start": "02\/17\/2015",
+        "end": "02\/17\/2015"
+      },
+      {
+        "name": "Fermentation",
+        "start": "02\/18\/2015",
+        "end": "03\/11\/2015"
+      },
+      {
+        "name": "Conditioning",
+        "start": "03\/12\/2015",
+        "end": "03\/26\/2015"
+      }
+    ]
+  },
+  {
     "name": "Belgian Tripel",
     "shortName": "BT",
     "done": false,
     "gone": false,
-    "state": "Fermenting",
+    "state": "Conditioning",
     "steps": [
       {
         "name": "Brew Day",
@@ -14,26 +38,26 @@ beers = [
       {
         "name": "Fermentation",
         "start": "01\/20\/2015",
-        "end": "02\/13\/2015"
+        "end": "02\/25\/2015"
       },
       {
         "name": "Conditioning",
-        "start": "02\/14\/2015",
-        "end": "03\/07\/2015"
+        "start": "02\/26\/2015",
+        "end": "03\/19\/2015"
       }
     ]
   },
   {
     "name": "IPA",
     "shortName": "IPA",
-    "done": false,
+    "done": true,
     "gone": false,
-    "state": "Bottled and Conditioning",
+    "state": "Done!",
     "steps": [
       {
         "name": "Brew Day",
         "start": "01\/19\/2015",
-        "end": "01\/19\/2015"
+        "end": "01\/19\/d2015"
       },
       {
         "name": "Fermentation",
@@ -53,7 +77,7 @@ beers = [
       {
         "name": "Conditioning",
         "start": "02\/07\/2015",
-        "end": "02\/20\/2015"
+        "end": "02\/17\/2015"
       }
     ]
   },
