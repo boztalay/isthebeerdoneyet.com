@@ -4,7 +4,7 @@ beers = [
     "shortName": "MS",
     "done": false,
     "gone": false,
-    "state": "Fermenting",
+    "state": "Conditioning",
     "steps": [
       {
         "name": "Brew Day",
@@ -14,12 +14,12 @@ beers = [
       {
         "name": "Fermentation",
         "start": "02\/18\/2015",
-        "end": "03\/11\/2015"
+        "end": "03\/08\/2015"
       },
       {
         "name": "Conditioning",
-        "start": "03\/12\/2015",
-        "end": "03\/26\/2015"
+        "start": "03\/09\/2015",
+        "end": "03\/24\/2015"
       }
     ]
   },

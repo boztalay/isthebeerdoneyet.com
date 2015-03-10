@@ -38,12 +38,15 @@ function fillSchedule() {
             stepEnd.setDate(stepEnd.getDate() + 1)
 
             if(step.overlap > 0) {
-                startDay = Math.max(0, (stepStart - startOfThisWeek)) / (1000 * 60 * 60 * 24)
-                endDay = startDay + step.overlap
+                startDay = Math.ceil(Math.max(0, (stepStart - startOfThisWeek)) / (1000 * 60 * 60 * 24))
+                endDay = Math.ceil(startDay + step.overlap)
 
                 for(var i = startDay; i < endDay; i++) {
+                    i = Math.ceil(i)
+
                     weekIndex = Math.floor(i / 7.0)
                     dayIndex = i % 7
+
                     cell = scheduleTable.rows[weekIndex].cells[dayIndex]
 
                     stepDiv = document.createElement("div")
