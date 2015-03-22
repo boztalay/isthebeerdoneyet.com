@@ -50,9 +50,9 @@ beers = [
   {
     "name": "Belgian Tripel",
     "shortName": "BT",
-    "done": false,
+    "done": true,
     "gone": false,
-    "state": "Conditioning",
+    "state": "Done!",
     "steps": [
       {
         "name": "Brew Day",
