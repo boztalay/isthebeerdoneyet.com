@@ -1,5 +1,29 @@
 beers = [
   {
+    "name": "American Wheat",
+    "shortName": "AW",
+    "done": false,
+    "gone": false,
+    "state": "Planned",
+    "steps": [
+      {
+        "name": "Brew Day",
+        "start": "03\/29\/2015",
+        "end": "03\/29\/2015"
+      },
+      {
+        "name": "Fermentation",
+        "start": "03\/30\/2015",
+        "end": "04\/08\/2015"
+      },
+      {
+        "name": "Conditioning",
+        "start": "04\/09\/2015",
+        "end": "04\/19\/2015"
+      }
+    ]
+  },
+  {
     "name": "Juicy German Pale Ale",
     "shortName": "JG",
     "done": false,
@@ -26,9 +50,9 @@ beers = [
   {
     "name": "Spring Break Milk Stout",
     "shortName": "MS",
-    "done": false,
+    "done": true,
     "gone": false,
-    "state": "Conditioning",
+    "state": "Stouty",
     "steps": [
       {
         "name": "Brew Day",
@@ -43,16 +67,16 @@ beers = [
       {
         "name": "Conditioning",
         "start": "03\/09\/2015",
-        "end": "03\/24\/2015"
+        "end": "03\/22\/2015"
       }
     ]
   },
   {
-    "name": "Belgian Tripel",
+    "name": "Tutti Frutti Belgian Tripel",
     "shortName": "BT",
     "done": true,
     "gone": false,
-    "state": "Done!",
+    "state": "Fruity",
     "steps": [
       {
         "name": "Brew Day",
@@ -76,7 +100,7 @@ beers = [
     "shortName": "IPA",
     "done": true,
     "gone": false,
-    "state": "Done!",
+    "state": "Hoppy",
     "steps": [
       {
         "name": "Brew Day",
