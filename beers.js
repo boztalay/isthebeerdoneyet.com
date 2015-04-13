@@ -2,9 +2,9 @@ beers = [
   {
     "name": "Juicy German Pale Ale",
     "shortName": "JG",
-    "done": false,
+    "done": true,
     "gone": false,
-    "state": "Conditioning",
+    "state": "Juicy",
     "steps": [
       {
         "name": "Brew Day",
@@ -75,7 +75,7 @@ beers = [
     "name": "IPA",
     "shortName": "IPA",
     "done": true,
-    "gone": false,
+    "gone": true,
     "state": "Hoppy",
     "steps": [
       {
