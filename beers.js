@@ -76,7 +76,7 @@ beers = [
     "shortName": "IPA",
     "done": true,
     "gone": true,
-    "state": "Hoppy",
+    "state": "Gone :(",
     "steps": [
       {
         "name": "Brew Day",
