@@ -1,10 +1,34 @@
 beers = [
   {
+    "name": "American Wheat Ale",
+    "shortName": "AW",
+    "done": false,
+    "gone": false,
+    "state": "Fermenting",
+    "steps": [
+      {
+        "name": "Brew Day",
+        "start": "09\/21\/2015",
+        "end": "09\/21\/2015"
+      },
+      {
+        "name": "Fermentation",
+        "start": "09\/22\/2015",
+        "end": "10\/05\/2015"
+      },
+      {
+        "name": "Conditioning",
+        "start": "10\/06\/2015",
+        "end": "10\/16\/2015"
+      }
+    ]
+  },
+  {
     "name": "Juicy German Pale Ale",
     "shortName": "JG",
     "done": true,
-    "gone": false,
-    "state": "Juicy",
+    "gone": true,
+    "state": "Done!",
     "steps": [
       {
         "name": "Brew Day",
