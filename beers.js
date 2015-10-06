@@ -4,7 +4,7 @@ beers = [
     "shortName": "AW",
     "done": false,
     "gone": false,
-    "state": "Fermenting",
+    "state": "Conditioning",
     "steps": [
       {
         "name": "Brew Day",
