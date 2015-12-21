@@ -1,10 +1,34 @@
 beers = [
   {
-    "name": "American Wheat Ale",
-    "shortName": "AW",
+    "name": "American Sour",
+    "shortName": "AS",
     "done": false,
     "gone": false,
-    "state": "Conditioning",
+    "state": "Still Fermenting...",
+    "steps": [
+      {
+        "name": "Brew Day",
+        "start": "11\/02\/2015",
+        "end": "11\/02\/2015"
+      },
+      {
+        "name": "Fermentation",
+        "start": "11\/03\/2015",
+        "end": "02\/01\/2016"
+      },
+      {
+        "name": "Conditioning",
+        "start": "02\/02\/2016",
+        "end": "03\/01\/2016"
+      }
+    ]
+  },
+  {
+    "name": "American Wheat Ale",
+    "shortName": "AW",
+    "done": true,
+    "gone": false,
+    "state": "Flat but Drinkable",
     "steps": [
       {
         "name": "Brew Day",
@@ -28,7 +52,7 @@ beers = [
     "shortName": "JG",
     "done": true,
     "gone": true,
-    "state": "Done!",
+    "state": "Gone, bummer",
     "steps": [
       {
         "name": "Brew Day",
