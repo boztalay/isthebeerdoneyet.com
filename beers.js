@@ -1,5 +1,29 @@
 beers = [
   {
+    "name": "Irish Red Redeux",
+    "shortName": "IRR",
+    "done": false,
+    "gone": false,
+    "state": "Fermenting",
+    "steps": [
+      {
+        "name": "Brew Day",
+        "start": "02\/05\/2016",
+        "end": "02\/05\/2016"
+      },
+      {
+        "name": "Fermentation",
+        "start": "02\/06\/2016",
+        "end": "02\/19\/2016"
+      },
+      {
+        "name": "Conditioning",
+        "start": "02\/20\/2016",
+        "end": "03\/04\/2016"
+      }
+    ]
+  },
+  {
     "name": "American Sour",
     "shortName": "AS",
     "done": false,

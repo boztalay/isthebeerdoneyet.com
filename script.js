@@ -11,7 +11,7 @@ function displayBeers() {
     startOfThisWeek.setDate(startOfThisWeek.getDate() - startOfThisWeek.getDay())
     startOfThisWeek.setHours(0, 0, 0, 0)
 
-    endOfThisPeriod = new Date(now)
+    endOfThisPeriod = new Date(startOfThisWeek)
     endOfThisPeriod.setDate(startOfThisWeek.getDate() + 14)
     endOfThisPeriod.setHours(0, 0, 0, 0)
 
