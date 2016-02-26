@@ -14,12 +14,12 @@ beers = [
       {
         "name": "Fermentation",
         "start": "02\/06\/2016",
-        "end": "02\/19\/2016"
+        "end": "03\/02\/2016"
       },
       {
         "name": "Conditioning",
-        "start": "02\/20\/2016",
-        "end": "03\/04\/2016"
+        "start": "03\/03\/2016",
+        "end": "03\/17\/2016"
       }
     ]
   },
@@ -38,12 +38,12 @@ beers = [
       {
         "name": "Fermentation",
         "start": "11\/03\/2015",
-        "end": "02\/01\/2016"
+        "end": "03\/15\/2016"
       },
       {
         "name": "Conditioning",
-        "start": "02\/02\/2016",
-        "end": "03\/01\/2016"
+        "start": "03\/16\/2016",
+        "end": "04\/16\/2016"
       }
     ]
   },
@@ -99,8 +99,8 @@ beers = [
     "name": "Spring Break Milk Stout",
     "shortName": "MS",
     "done": true,
-    "gone": false,
-    "state": "Stouty",
+    "gone": true,
+    "state": "Out of stock",
     "steps": [
       {
         "name": "Brew Day",
@@ -123,8 +123,8 @@ beers = [
     "name": "Tutti Frutti Belgian Tripel",
     "shortName": "BT",
     "done": true,
-    "gone": false,
-    "state": "Fruity",
+    "gone": true,
+    "state": "Donezo",
     "steps": [
       {
         "name": "Brew Day",
