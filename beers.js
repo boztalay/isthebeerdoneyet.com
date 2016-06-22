@@ -1,10 +1,19 @@
 beers = [
   {
+    "name": "IPA 2",
+    "shortName": "IP2",
+    "done": true,
+    "gone": false,
+    "state": "Ready to drink!",
+    "steps": [
+    ]
+  },
+  {
     "name": "Irish Red Redeux",
     "shortName": "IRR",
-    "done": false,
-    "gone": false,
-    "state": "Fermenting",
+    "done": true,
+    "gone": true,
+    "state": "Gone",
     "steps": [
       {
         "name": "Brew Day",
@@ -28,7 +37,7 @@ beers = [
     "shortName": "AS",
     "done": false,
     "gone": false,
-    "state": "Still Fermenting...",
+    "state": "Still Conditioning...",
     "steps": [
       {
         "name": "Brew Day",
