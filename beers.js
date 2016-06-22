@@ -60,8 +60,8 @@ beers = [
     "name": "American Wheat Ale",
     "shortName": "AW",
     "done": true,
-    "gone": false,
-    "state": "Flat but Drinkable",
+    "gone": true,
+    "state": "Rest in Peace",
     "steps": [
       {
         "name": "Brew Day",
